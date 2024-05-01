@@ -1,0 +1,123 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalBox {
+    position: relative;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px #acacac;
+    border-radius: 10px;
+    background-color: white;
+    cursor: auto;
+    max-height: 85%;
+    overflow-y: scroll;
+}
+
+.modalTitle {
+    color: #003da0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modalContent {
+    margin-top: 30px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.modalContent > p {
+    text-align: justify;
+}
+
+.modalContent > p > a {
+    color: #0047bb;
+}
+
+.modalActions {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.modalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 250ms ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+.modalClose:hover {
+    transform: rotate(180deg);
+}
+
+.modalCancelBtn {
+    background-color: #fff;
+    border: 2px solid #003da0;
+    color: #003da0;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 20px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.modalCancelBtn:hover {
+    color: #fff;
+    background-color: #003da0;
+}
+
+.modalCloseBtn {
+    background-color: #003da0;
+    border: 2px solid #003da0;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 20px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.modalCloseBtn:hover {
+    color: #fff;
+    background-color: #0047bb;
+}
+
+@media only screen and (min-width: 800px) {
+    .modalBox {
+        max-width: 860px;
+        margin: 30px;
+        padding: 50px;
+        width: 80%;
+        overflow-y: auto;
+    }
+}

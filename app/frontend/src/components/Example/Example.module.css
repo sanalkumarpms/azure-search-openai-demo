@@ -1,0 +1,44 @@
+.examplesNavList {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.example {
+    word-break: break-word;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    outline: 2px solid rgba(221, 221, 221, 1);
+}
+
+.example:hover {
+    background-color: #0047bb;
+    color: #ffffff;
+    box-shadow:
+        0px 8px 16px rgba(0, 0, 0, 0.14),
+        0px 0px 2px rgba(0, 0, 0, 0.12);
+    outline: 2px solid rgba(0, 71, 187, 1);
+}
+
+.exampleText {
+    margin: 0;
+    font-size: 20px;
+    width: 280px;
+    height: 60px;
+}
+
+@media only screen and (max-height: 780px) {
+    .exampleText {
+        font-size: 20px;
+        height: 80px;
+    }
+}
